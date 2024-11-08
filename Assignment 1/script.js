@@ -49,9 +49,19 @@ const blue = new THREE.MeshStandardMaterial({ color: 0x0c78ad });
 const grass = new THREE.MeshStandardMaterial({ color: 0x027812 });
 const gray = new THREE.MeshStandardMaterial({ color: 0x5a5e5a });
 
+// Function to create outlines
+function addOutline(mesh, color, thickness = 1) {
+  const edges = new THREE.EdgesGeometry(mesh.geometry);
+  const lineMaterial = new THREE.LineBasicMaterial({ color: color, linewidth: thickness });
+  const line = new THREE.LineSegments(edges, lineMaterial);
+  mesh.add(line);
+  return line;
+}
+
 // Create the campus objects
 const terrain = new THREE.Mesh(plain, grass);
 terrain.receiveShadow = true; // Enable receiving shadows
+addOutline(terrain, 0x000000, 4); // Add black outline for terrain with thicker lines
 
 const road = new THREE.Mesh(roadGeometry, gray);
 road.receiveShadow = true;
@@ -61,12 +71,15 @@ road1.receiveShadow = true;
 
 const buildingLibrary = new THREE.Mesh(largeBuilding, white);
 buildingLibrary.castShadow = true;
+addOutline(buildingLibrary, 0x404040); // Dark gray outline for buildingLibrary
 
 const building816 = new THREE.Mesh(smallBuilding, blue);
 building816.castShadow = true;
+addOutline(building816, 0x404040); // Dark gray outline for building816
 
 const buildingConvict = new THREE.Mesh(convict, orange);
 buildingConvict.castShadow = true;
+addOutline(buildingConvict, 0x404040); // Dark gray outline for buildingConvict
 
 // Rotations
 terrain.rotation.x = -Math.PI / 2;
