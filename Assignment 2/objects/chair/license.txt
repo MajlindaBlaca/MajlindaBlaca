@@ -1,0 +1,11 @@
+Model Information:
+* title:	DRT-011Chair
+* source:	https://sketchfab.com/3d-models/drt-011chair-4d22e348610440f29332e9ff991f6b6a
+* author:	杭州维界科技有限公司 (https://sketchfab.com/zhousongjiang)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "DRT-011Chair" (https://sketchfab.com/3d-models/drt-011chair-4d22e348610440f29332e9ff991f6b6a) by 杭州维界科技有限公司 (https://sketchfab.com/zhousongjiang) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
