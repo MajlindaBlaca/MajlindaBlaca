@@ -54,6 +54,51 @@ export function createClassroom(scene) {
   windowMesh.rotation.y = Math.PI / 2;
   scene.add(windowMesh);
 
+  // Left Panel (Covers left side of the wall)
+  const leftPanel = new THREE.Mesh(
+    new THREE.BoxGeometry(3, 3, 0.5),
+    wallMaterial
+  );
+  leftPanel.position.set(-8, 1.5, -8.6);
+  leftPanel.rotation.y = Math.PI / 2;
+  scene.add(leftPanel);
+
+  // Right Panel (Covers right side of the wall)
+  const rightPanel = new THREE.Mesh(
+    new THREE.BoxGeometry(3, 3, 0.5),
+    wallMaterial
+  );
+  rightPanel.position.set(-8, 1.5, 8.6);
+  rightPanel.rotation.y = Math.PI / 2;
+  scene.add(rightPanel);
+
+  // Top Panel (Above the window)
+  const topPanel = new THREE.Mesh(
+    new THREE.BoxGeometry(15, 1, 0.5),
+    wallMaterial
+  );
+  topPanel.position.set(-8, 2.5, 0);
+  topPanel.rotation.y = Math.PI / 2;
+  scene.add(topPanel);
+
+  // Bottom Panel (Below the window)
+  const bottomPanel = new THREE.Mesh(
+    new THREE.BoxGeometry(15, 1, 0.5),
+    wallMaterial
+  );
+  bottomPanel.position.set(-8, 0.5, 0);
+  bottomPanel.rotation.y = Math.PI / 2;
+  scene.add(bottomPanel);
+
+  // Middle Panel (Separates the two window sections)
+  const middlePanel = new THREE.Mesh(
+    new THREE.BoxGeometry(2, 3, 0.5),
+    wallMaterial
+  );
+  middlePanel.position.set(-8, 1.5, 0);
+  middlePanel.rotation.y = Math.PI / 2;
+  scene.add(middlePanel);
+
   // Right wall
   const rightWall = new THREE.Mesh(
     new THREE.BoxGeometry(20, 3, 0.1),
